@@ -1,0 +1,193 @@
+@CHARSET "UTF-8";
+body{
+	background:white;
+}
+/********Start--发送好友申请和站内信的DIV**********/
+.divForSendMessage,.divForMakeFriend{
+	width: 500px;
+	height: 285px;
+	border: 1px solid orange;
+	background-color:#ccc;
+	position: fixed;
+	left: 30%;
+	top:200px;
+	z-index: 1;
+	display: none;
+}
+
+.divForSendMessage dl,.divForMakeFriend dl{
+	width: 100%;
+	border: 1px solid red;
+}
+.divForSendMessage dl dd,.divForMakeFriend dl dd{
+	width: 100%;
+	border: 0px solid green;
+}
+
+.divForSendMessage dl dd span.closeDiv,.divForMakeFriend dl dd span.closeDiv{
+	width:4%;
+	height:20px;	
+	border: 0px solid green;
+	display: inline-block;
+	margin-left:96%;
+	opacity: 0.5;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+	
+	background: url(../images/close.png) no-repeat center;	
+	background-color: #ccc;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	background-size: cover;
+}
+.divForSendMessage dl dd span.closeDiv:hover,.divForMakeFriend span.closeDiv:hover{
+	opacity: 1;
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+	cursor: pointer;
+}
+.divForSendMessage dl dd.getter,.divForMakeFriend dl dd.respendent{
+	width: 100%;
+	height: 25px;
+	border: 0px solid black;
+}
+.divForSendMessage dl dd textarea,.divForMakeFriend dl dd textarea{
+	width: 99%;
+	height:200px;
+	border: 1px solid red;
+	margin: auto;
+}
+
+.divForSendMessage dl dd input.button,.divForMakeFriend dl dd input.button{		
+	border: solid 2px #3D3327;
+	width:15%;
+	height:30px;
+	margin-left: 85%;
+
+}
+.divForSendMessage dl dd input.button:hover,.divForMakeFriend dl dd input.button:hover{
+	background:#FF7D13;
+	border: solid 2px #FF7D13;
+	cursor: pointer;
+}
+
+
+/********End--发送信息的DIV**********/
+/******Start--查询的结果**************/
+.searchResultDiv{
+	width: 90%;
+	border: 1px solid red;
+	margin: 60px auto;
+
+}
+.searchResultDiv #searchKeyWord{
+	width: 100%;
+	border: 0px solid red;
+}
+.searchResultDiv .searchResult{
+	width: 80%;
+	height: 120px;
+	margin:20px auto;
+	border: 0px solid orange;
+	transition: 0.4s all;
+	-webkit-transition: 0.4s all;
+	-moz-transition: 0.4s all;
+	-o-transition: 0.4s all;
+
+	border-radius: 0.2em;
+	-webkit-border-radius: 0.2em;
+	-moz-border-radius: 0.2em;
+	-o-border-radius: 0.2em;
+} 
+.searchResultDiv .searchResult:hover{
+	background:white;
+	-webkit-transform: scale(1.04)  translateY(-5px);
+	-o-transform:scale(1.04)	translateY(-5px);
+	-ms-transform: scale(1.04)	translateY(-5px);
+	transform: scale(1.04)	translateY(-5px);
+}
+.searchResultDiv .searchResult table{
+	border: 1px solid orange;
+	width: 100%;
+	height:100%;
+	border-collapse:collapse;
+	border-spacing:0;
+	
+}
+.searchResultDiv .searchResult table tr td{
+	vertical-align: middle;/***垂直方向的位置***/
+	text-align: center;
+}
+
+.searchResultDiv .searchResult table tr td:nth-child(1){
+	width:120px;
+	border: 1px dashed orange;
+}
+.searchResultDiv .searchResult table tr td:nth-child(1) div{
+	width: 100%;
+	height:120px;
+	background: no-repeat center;	
+	background-color: #fff;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	background-size: cover;
+}
+.searchResultDiv .searchResult table tr td:nth-child(2){
+	border: 1px dashed orange;
+}
+
+.searchResultDiv .searchResult table tr td input.button{		
+	border: solid 2px #3D3327;
+	width:50%;
+	height:30px;
+
+}
+.searchResultDiv .searchResult table tr td input.button:hover{
+	background:#FF7D13;
+	border: solid 2px #FF7D13;
+	cursor: pointer;
+}
+/***发送站内信的按钮***/
+.searchResultDiv .searchResult table tr td input.messageSend{		
+	border: solid 2px #3D3327;
+	width:10%;
+	height:30px;
+
+}
+.searchResultDiv .searchResult table tr td input.messageSend:hover{
+	background:#FF7D13;
+	border: solid 2px #FF7D13;
+	cursor: pointer;
+}
+/***添加好友的按钮***/
+.searchResultDiv .searchResult table tr td input.friensdMake{		
+	border: solid 2px #3D3327;
+	width:50%;
+	height:30px;
+
+}
+.searchResultDiv .searchResult table tr td input.friensdMake:hover{
+	background:#FF7D13;
+	border: solid 2px #FF7D13;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

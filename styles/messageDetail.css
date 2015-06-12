@@ -1,0 +1,37 @@
+@CHARSET "UTF-8";
+body{
+	background: white;
+}
+#messageDetail{
+	width:90%;
+	margin: 100px auto;
+}
+#messageDetail dl {
+	width:100%;
+	margin:30px auto;
+}
+#messageDetail dl dd {
+	margin:5px;
+	line-height:150%;
+}
+#messageDetail dl dd input {
+	width:70px;
+	height:20px;
+	font-size:12px;
+	cursor:pointer;
+}
+#messageDetail dl dd.button {
+	text-align:center;
+}
+
+#messageDetail dl dd input.button{		
+	border: solid 2px #3D3327;
+	margin-left:20px;
+	width:10%;
+	height:35px;
+
+}
+#messageDetail dl dd input.button:hover{
+	background:#FF7D13;
+	border: solid 2px #FF7D13;
+}

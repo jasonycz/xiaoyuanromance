@@ -1,0 +1,63 @@
+@CHARSET "UTF-8";
+#friendMakeCenter{
+	width: 90%;
+	margin:100px auto;
+	border:2px solid red;
+}
+
+#friendMakeCenter table {
+	width:90%;
+	margin:10px auto;
+	text-align:center;
+	background:#ccc;
+	margin-bottom:0px;
+}
+#friendMakeCenter table th,#friendMakeCenter table td {
+	height:25px;
+	line-height:25px;
+	background:#fff;
+}
+#friendMakeCenter table td a {
+	text-decoration:none;
+	color:#333;
+}
+#friendMakeCenter table td a:hover {
+	text-decoration:underline;
+}
+#friendMakeCenter table td span {
+	text-decoration:none;
+	color:#333;
+	cursor: default;
+}
+/****按钮的样式****/
+#friendMakeCenter table td input.button{		
+	border: solid 2px #f00;
+	margin-left:20px;
+	width:8%;
+	height:30px;
+
+}
+#friendMakeCenter table td input.button:hover{
+	background:#FF7D13;
+	border: solid 2px #FF7D13;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

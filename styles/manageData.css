@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+.manageData{
+	width: 90%;
+	margin: 100px auto;
+	border: 1px solid red;
+	background: white;
+	
+}
+.manageData table {
+	width: 100%;
+	border: 1px solid green;
+}
+
+.manageData table tr td,th{
+	width: 16%;
+	border: 1px solid orange;
+	text-align: center;
+}

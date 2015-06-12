@@ -1,0 +1,170 @@
+@CHARSET "UTF-8";
+body{
+	background: white;
+}
+.search{
+	width: 80%;
+	margin: 90px auto;
+	border:1px solid red;
+}
+.search select{
+	width: 80px;
+
+}
+/******************************学校信息的样式**********************************/
+.search .collegeDiv{
+	margin-top:20px;
+	border: 1px solid green;
+	width: 700px;
+	display: none;
+	z-index: 999px;
+	position: absolute;
+	background-color: white;
+	margin-left: 10%;
+
+}
+
+.search .collegeDiv table{
+	border: 5px solid red;
+	/*border-left-color: black;*/
+	/*border-bottom-style: dotted;*/
+	border-style:dotted;
+	
+	width: 620px;
+	margin:auto;
+	
+}
+.search .collegeDiv table li{
+	list-style-type: none;
+	display: inline;
+}
+.search .collegeDiv table td{
+	border:  solid yellow;
+	border-width: 0px 0px 5px 0px;
+	width: 620px;
+	word-break:break-all;/*解决限制td长度后,英文文本超出td长度不自动换行的问题*/	
+}
+#colleges{
+	height: 300px;
+	overflow: scroll;
+}
+.collegeDiv a{
+	text-decoration: none;
+}
+#college{/*学校input控件*/
+	width:160px;
+}
+
+/*********************下面的部分需要修改***************************/
+.search .searchInformation{
+	width:90%;
+	margin: 30px auto;
+	border: 2px solid gray;	/*#D6D6D6*/
+}
+.search .searchInformation table:nth-child(1){
+	width: 100%;
+	height: 30px;
+	border: 1px solid #D6D6D6;
+	/*background-color: green;*/
+}
+.search .searchInformation table:nth-child(1) tr{
+	height: 30px;
+}
+
+.InformationTd1{
+	width: 95%;	
+	transition: 0.2s all;
+	-webkit-transition: 0.2s all;
+	-moz-transition: 0.2s all;
+	-o-transition: 0.2s all;
+	border: 1px solid #D6D6D6;
+	border-radius: 0.2em;
+	-webkit-border-radius: 0.2em;
+	-moz-border-radius: 0.2em;
+	-o-border-radius: 0.2em;
+}
+.InformationTd1:hover  
+{	
+	font-size:20px;
+	background-color:orange;/*#C80100*/
+	box-shadow: 0 0 0px 2px #fff;
+	-webkit-transform: scale(1.05) translateY(-5px);
+	z-index: 11;
+	border-color:#FF7D13;
+}
+
+#searchInfo
+{
+	display:block;
+	/*border:2px solid red;*/
+	/*background-color: yellow;*/
+}
+#searchInfo table:nth-child(1){
+	/*border:1px solid red;*/
+	background-color: none;
+}
+#searchInfo table:nth-child(1) td{
+	width:50%;
+}
+
+
+
+
+
+
+
+.button
+{
+	border: solid 2px #3D3327;
+}
+.button:hover
+{
+	background:#FF7D13;
+	border: solid 2px #FF7D13;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

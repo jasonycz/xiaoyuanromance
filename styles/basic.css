@@ -1,0 +1,512 @@
+@CHARSET "UTF-8";
+/*******目前是头和尾的样式，从index中分离出来的*********/
+/* reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+ul{list-style:none;margin:0px;padding:0px;}
+/* start editing from here */
+a{text-decoration:none;}
+.clear{clear:both;}/* clear float */
+/*end reset*/
+body{
+	font-family: 'Open Sans', sans-serif;
+	background:#1D0E2B;	
+	
+}
+.fontStyleForName{
+	color:#888;
+	font-style: 微软雅黑;
+	font-size: 14px;
+	line-height: 19px;
+	font-weight: bold;
+}
+.fontStyleForHightlight{
+	color:red;
+}
+
+
+/*----start-wrap---*/
+.wrap{
+	border:0px solid red;
+	width:70%;
+	margin:0 auto;
+	background:transparent;
+
+	
+}
+/*---start-header---*/
+.header{
+	width: 100%;
+	height:50px;/**************************************需要酌情修改*****************************************/
+	background: #444;
+	z-index: 997;
+	position: fixed;
+	top:0px;
+	left:0px;
+	
+}
+.header .manageDiv{
+	width: 50px;
+	height: 50px;
+	background: orange;
+	border-radius:50%;
+	position: fixed;/*************我不让它占用header中的空间，为的是让后面的.wrap .top-nav能够居中处理******************/
+					/*************保证不管是在我这，还是在用户那都能够很好的显示，因为用的是margin-left计算****************/
+}
+.header .manageDiv a{
+	width:100%;
+	height:20px;
+	font-size: 18px;
+	font-weight: 600;
+	border:0px solid white;
+	display:inline-block;
+	color: red;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	margin-top: 15px;
+	text-align: center;
+	
+}
+.header .logo{
+	border:0px solid blue;
+	/*margin-top: 1.3em;*/
+}
+/*****Start--导航栏******/
+.header .wrap{
+	width: 70%;
+	float: left;
+	margin-left:15%;
+}
+.header .wrap .top-nav{
+	width:80%;
+	border:0px solid orange;
+/*	background-color:green;*/
+	height: 50px;
+	margin: 0 auto;	
+}
+.header .wrap .top-nav ul{
+	height: 100%;
+	border: 0px solid orange;
+	border-radius: 4px;
+	list-style-type: none;
+	
+	
+}
+.header .wrap .top-nav ul li{
+	width:10.8%;
+	display:inline-block;
+	border: 0px solid red;
+	height:50px;
+	margin:0px 0px;
+	 position: relative;
+	float: left;
+}
+/**************好友消息的处理************/
+.header .wrap .top-nav ul li.friend {
+	background: url(../images/friend.png) no-repeat center;
+	-webkit-background-size: 50%;
+  	-moz-background-size: 50%;
+  	background-size: 50%;
+	cursor: pointer;
+
+}
+/*************站内信的处理**************/
+.header .wrap .top-nav ul li.message {
+	background: url(../images/new-message.jpg) no-repeat center;
+	-webkit-background-size: 50%;
+  	-moz-background-size: 50%;
+  	background-size: 50%;
+	cursor: pointer;
+
+}
+.header .wrap .top-nav ul li a{
+	width:100%;
+	height:20px;
+	font-size: 18px;
+	font-weight: 600;
+	border:0px solid white;
+	display:inline-block;
+	color: #929291;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	margin-top: 15px;
+	text-align: center;
+}
+
+.header .wrap .top-nav ul li a:hover,.header .wrap .top-nav ul li.active a{
+	color:#fff;
+}
+/*************下拉的好友信息显示和站内信显示******************/
+.header .wrap .top-nav ul li.friend #friendDiv {
+	width:450px;
+	padding-top: 13px;
+    top: 50%;
+    background-color: green\9;
+	background:transparent;
+    border-radius: 4px;
+	position: absolute;
+    left: 15px;
+    opacity: 0;
+    z-index: -100;
+    -webkit-transform: scale(1, 0.99);
+    -webkit-transform-origin: 0 0;
+    visibility: hidden;
+    display: none\9;
+    -webkit-transition: 0.3s ease-out;
+    -moz-transition: 0.3s ease-out;
+    -o-transition: 0.3s ease-out;
+    transition: 0.3s ease-out;
+    -webkit-backface-visibility: hidden;
+}
+.header .wrap .top-nav ul li:hover > #friendDiv {
+	  top: 95%;
+      opacity: 1;
+      z-index: 100;
+      -webkit-transform: scale(1, 1);
+      visibility: visible;
+      display: block\9;
+}
+
+.header .wrap .top-nav ul > li > #friendDiv:before {
+     content: "";
+     border-style: solid;
+     border-width: 0 9px 9px 9px;
+     border-color: transparent transparent #34495e transparent;
+	 width: 0px;
+     height: 0px;
+     position: absolute;
+     left: 20px;
+     top: 5px;
+     -webkit-transform: rotate(360deg);
+}
+.header .wrap .top-nav ul li.message #messageDiv {
+	width:300px;
+	padding-top: 13px;
+    top: 50%;
+    background-color: green\9;
+	background:transparent;
+    border-radius: 4px;
+	position: absolute;
+    left: -115px;
+    opacity: 0;
+    z-index: -100;
+    -webkit-transform: scale(1, 0.99);
+    -webkit-transform-origin: 0 0;
+    visibility: hidden;
+    display: none\9;
+    -webkit-transition: 0.3s ease-out;
+    -moz-transition: 0.3s ease-out;
+    -o-transition: 0.3s ease-out;
+    transition: 0.3s ease-out;
+    -webkit-backface-visibility: hidden;
+}
+.header .wrap .top-nav ul li:hover > #messageDiv {
+	  top: 95%;
+      opacity: 1;
+      z-index: 100;
+      -webkit-transform: scale(1, 1);
+      visibility: visible;
+      display: block\9;
+}
+
+.header .wrap .top-nav ul > li > #messageDiv:before {
+     content: "";
+     border-style: solid;
+     border-width: 0 9px 9px 9px;
+     border-color: transparent transparent #34495e transparent;
+	 width: 0px;
+     height: 0px;
+     position: absolute;
+     left: 140px;
+     top: 5px;
+     -webkit-transform: rotate(360deg);
+}
+
+/*********************Start--新消息的个数显示样式***********************/
+.addFriendInfoNum,.messageInfoNum {
+	background-color: #e74c3c;
+	border-radius: 30px;
+	color: white;
+	display: none;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 18px;
+	min-width: 8px;
+	padding: 0 5px;
+	position: absolute;
+	right: 3px;
+	text-align: center;
+	text-shadow: none;
+	
+	
+}
+.active {
+    display: block;
+}
+/*********************End--新消息的个数显示样式***********************/
+/*********************弹出的好友/新消息的div样式设计Start****************/
+#messageDiv table,#friendDiv  table {
+	width:100%;
+	text-align:center;
+	border-radius:4px;
+	box-shadow: 0px 0px 20px 10px red ;
+	border:0px solid green;
+	color:#ccc;
+	background: #444;
+	border-collapse:collapse;
+	
+}
+#messageDiv table th,#friendDiv table th{
+	color: #fff;
+	font-weight: bold;
+
+}
+#messageDiv table td,#friendDiv table td {
+	width:auto;
+	height:25px;
+	border:1px solid red;
+	vertical-align: middle;
+
+	
+}
+#messageDiv  table td a , #friendDiv table td a {
+	width:100%;
+	text-decoration:none;
+	cursor: pointer;
+	color:#ccc;
+	border: 0px solid green;
+	position: relative;
+	top:-10px;
+
+}
+#messageDiv  table td a:hover , #friendDiv table td a:hover {
+	color: white;
+}
+#messageDiv  table td a:hover,#friendDiv  table td a:hover {
+	text-decoration:underline;
+}
+#friendDiv  table td span {
+	text-decoration:none;
+	color:#333;
+	cursor: default;
+}
+
+/****************弹出的新消息的div样式设计End********************/
+
+
+.header .wrap .top-nav ul li a:hover span{
+	zoom: 1;
+	filter: alpha(opacity=50);
+	opacity: 0.7;
+	-webkit-transition: opacity .15s ease-in-out;
+	-moz-transition: opacity .15s ease-in-out;
+	-ms-transition: opacity .15s ease-in-out;
+	-o-transition: opacity .15s ease-in-out;
+	transition: opacity .15s ease-in-out;
+	cursor: pointer;
+}
+/*****End--导航栏******/
+
+
+/******用户信息*******/
+.header .user{
+	width:13%;
+	height:50px;
+	border:1px solid orange;
+	padding:0px;
+	cursor: pointer;
+/*	background: red;*/
+	position:relative;
+	float:right;
+
+}
+/*****包含用户名和下拉框的span*********/
+.header .user  span.usernameAnddownMenu{
+	border: 1px solid orange;
+	border-left:0px;
+	width:50%;
+	height:35%;
+	display:inline-block;
+	/*float: left;*/
+	margin-top: 18px;/*按计算的话是18px*//**************************************需要酌情修改*****************************************/
+	
+}
+.header .user span.usernameAnddownMenu span.username{
+	width: 70%;
+	height:100%;
+	overflow:hidden;
+	/*text-overflow:ellipsis;*/
+	/*word-break:keep-all;*/
+	display:inline-block;
+	border:0px solid black;
+	color:white;
+	float: left;
+	text-align: center;
+}
+.header .user span.downMenu{
+	width: 20%;
+	height:100%;
+	display:inline-block;
+/*	border: 1px solid red;*/
+	border-left:1px solid orange;
+	background: url(../images/down1.png) no-repeat center;
+	-webkit-background-size: 100%;
+  	-moz-background-size: 100%;
+  	background-size: 100%;
+ 	visibility: visible;
+	float: right;
+	cursor: pointer;
+	
+}
+/*****用户的相片显示********/
+.header .user > span.face{
+	width: 40%;
+	height:95%;
+	display:inline-block;
+	float:right;
+	/*background: url(../images/default.jpg) no-repeat center;*/
+	background: no-repeat center;
+	border: 1px solid #333;
+	-webkit-background-size: contain;
+  	-moz-background-size: contain;
+  	background-size: contain;
+ 	visibility: visible;
+}
+
+/**********Start--用户信息*********/
+.header .user #userInformation{
+	width:500px;
+    top: 50%;
+    background-color: green\9;
+	background:transparent;
+    border-radius: 4px;
+	position: absolute;
+    left: 0px;
+    opacity: 0;
+    z-index: -100;
+    -webkit-transform: scale(1, 0.99);
+    -webkit-transform-origin: 0 0;
+    visibility: hidden;
+    display: none/9;
+    -webkit-transition: 0.3s ease-out;
+    -moz-transition: 0.3s ease-out;
+    -o-transition: 0.3s ease-out;
+    transition: 0.3s ease-out;
+    -webkit-backface-visibility: hidden;
+	
+}
+.header .user:hover > #userInformation {
+	  top: 100%;
+      opacity: 1;
+      z-index: 100;
+      -webkit-transform: scale(1, 1);
+      visibility: visible;
+	 background:green;
+      display: block/9;
+	
+}
+#userInformation table{
+	width:100%;
+	height:100%;
+	text-align:center;
+	background:green;
+	border:0px solid white;
+
+}
+#userInformation table tr td{
+	text-align: center;
+	border: 1px solid red;
+	vertical-align: middle;
+}
+#userInformation table tr td a{
+	border:0px solid orange;
+	width: 100%;
+	color: white;
+	
+	
+}
+#userInformation table tr:nth-child(1){
+	height: 80%;
+}
+#userInformation table tr:nth-child(1) td{
+	border-bottom: 3px dashed white;
+}
+
+#userInformation table tr:nth-child(1) td:nth-child(1) span.face{
+	width: 100%;
+	height:100%;
+	display:inline-block;
+	background: no-repeat center;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	background-size: cover;
+}
+
+/**********Start--用户信息*********/
+/****分页的样式Start****/
+#page_num {
+	height:20px;
+	clear:both;
+	padding:20px 0;
+	position:relative;
+	font-size:12px;
+}
+#page_num ul {
+	position:absolute;
+	right:30px;
+	height:20px;
+}
+#page_num ul li {
+	float:left;
+	width:26px;
+	height:20px;
+}
+#page_num ul li a {
+	display:block;
+	width:20px;
+	height:20px;
+	line-height:20px;
+	border:1px solid #333;
+	text-align:center;
+	text-decoration:none;
+}
+#page_num ul li a:hover,#page_num ul li a.selected {
+	background:#666;
+	font-weight:bold;
+	color:#fff;
+}
+#page_text {
+	height:20px;
+	clear:both;
+	padding:20px 0;
+	font-size:12px;
+}
+#page_text ul {
+	text-align:center;
+}
+#page_text ul li {
+	display:inline;
+}
+#page_text ul li a {
+	color:#333;
+}
+/****分页的样式End****/
+
+/****网页尾部的样式*****/
+
+#footer{
+	width: 100%;
+	
+}
+#footer p{
+	width:100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+

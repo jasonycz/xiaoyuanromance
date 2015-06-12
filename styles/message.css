@@ -1,0 +1,57 @@
+@CHARSET "UTF-8";
+#messageCenter{
+	width: 90%;
+	margin:100px auto;
+	border:2px solid red;
+}
+
+#messageCenter table {
+	width:90%;
+	margin:10px auto;
+	text-align:center;
+	background:#ccc;
+	margin-bottom:0px;
+}
+#messageCenter table th,#messageCenter table td {
+	height:25px;
+	line-height:25px;
+	background:#fff;
+}
+#messageCenter table td a {
+	text-decoration:none;
+	color:#333;
+}
+#messageCenter table td a:hover {
+	text-decoration:underline;
+}
+/****按钮的样式****/
+#messageCenter table td input.button{		
+	border: solid 2px #f00;
+	margin-left:20px;
+	width:8%;
+	height:30px;
+
+}
+#messageCenter table td input.button:hover{
+	background:#FF7D13;
+	border: solid 2px #FF7D13;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

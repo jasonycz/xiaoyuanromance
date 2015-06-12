@@ -1,0 +1,45 @@
+@CHARSET "UTF-8";
+body{
+	background: white;
+}
+.messageReply{
+	width:90%;
+	margin: 100px auto;
+	border: 1px solid red;
+	
+}
+.messageReply dl {
+	width:100%;
+	margin:30px auto;
+}
+.messageReply dl dd {
+	margin:5px;
+	line-height:150%;
+}
+.messageReply dl dd textarea.content {
+	width:99%;
+	height:150px;
+	font-size:12px;
+	
+}
+.messageReply dl dd.button {
+	text-align:center;
+}
+.messageReply dl dd input {
+	width:70px;
+	height:20px;
+	font-size:12px;
+	cursor:pointer;
+}
+.messageReply dl dd input.button{		
+	border: solid 2px #3D3327;
+	margin-left:20px;
+	width:9%;
+	height:35px;
+	margin-left: 90%;
+
+}
+.messageReply dl dd input.button:hover{
+	background:#FF7D13;
+	border: solid 2px #FF7D13;
+}

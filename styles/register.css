@@ -1,0 +1,332 @@
+@CHARSET "UTF-8";
+.register{
+	width: 80%;
+	margin: 0 auto;
+	border:1px solid red;
+	background:white;
+}
+.register select{
+	width: 80px;
+}
+.register #header{
+	width:100%;
+	height:30px;
+	position:fixed;
+	top:0px;
+	left:0px;
+	background:#f00 ;
+	
+}
+.register #header p{
+	width:50%;
+	margin: 0 auto;
+	border: 0px solid blue;
+	text-align: center;
+}
+/******************************学校信息的样式**********************************/
+.register .collegeDiv{
+	margin-top:100px;
+	border: 1px solid green;
+	width: 700px;
+	display: none;
+	z-index: 999px;
+	position: absolute;
+	background-color: white;
+	margin-left: 20%;
+
+}
+
+.register .collegeDiv table{
+	border: 5px solid red;
+	/*border-left-color: black;*/
+	/*border-bottom-style: dotted;*/
+	border-style:dotted;
+	
+	width: 620px;
+	margin:auto;
+	
+}
+.register .collegeDiv table li{
+	list-style-type: none;
+	display: inline;
+}
+.register .collegeDiv table td{
+	border:  solid yellow;
+	border-width: 0px 0px 5px 0px;
+	width: 620px;
+	word-break:break-all;/*解决限制td长度后,英文文本超出td长度不自动换行的问题*/	
+}
+#colleges{
+	height: 300px;
+	overflow: scroll;
+}
+.collegeDiv a{
+	text-decoration: none;
+}
+#college{/*学校input控件*/
+	width:160px;
+}
+/***************************Calendar的样式*******************************/
+#calendar{
+	width: 203px;
+}
+#oContainer { 
+               width: 203px; 
+               padding: 0px; 
+               background-color: #46DE46; /*颜色以后再确定*/
+               border-left: buttonhighlight 1px solid; 
+               border-top: buttonhighlight 1px solid; 
+               border-right: buttonshadow 1px solid; 
+               border-bottom: buttonshadow 2px solid; 
+			   display: none;
+			   z-index: 990;
+			   position: absolute;
+ }
+ .DateTable { 
+               font: 10pt; 
+               word-break: break-all; 
+	  		   color:yellow;
+ }
+ .WeekTd, .BlankTd { 
+               font: 10pt; 
+               border: 1px solid menu; 
+ }
+ .Today { 
+               font: 10pt; 
+               color: red; 
+               cursor: hand; 
+               position: relative; 
+               left: 1px; 
+               top: 1px; 
+               border-left: 1px solid dimgray; 
+               border-top: 1px solid dimgray; 
+               border-right: 1px solid white; 
+               border-bottom: 1px solid white; 
+ }
+ .MonthTd { 
+               font: 10pt; 
+               font-family: webdings; 
+               cursor: hand; 
+               border: 1px solid menu; 
+               zmm: expression(onmouseenter = function() {
+                               style.color = 'red'; 
+                    }, 
+                    onmouseout = function() { 
+                               style.color = ''; 
+                    }); 
+ }
+ .SelectTd { 
+               border: 2px solid menu; 
+ }
+ .over { 
+               position: relative; 
+               cursor: hand; 
+               border-right: 1px solid buttonshadow; 
+               border-bottom: 1px solid buttonshadow; 
+               border-left: 1px solid buttonhighlight; 
+               border-top: 1px solid buttonhighlight; 
+ }
+ .out { 
+               border-left: 1px solid buttonface; 
+               border-top: 1px solid buttonface; 
+               border-right: 1px solid buttonface; 
+               border-bottom: 1px solid buttonface; 
+ }
+ .down { 
+               position: relative; 
+               left: 1px; 
+               top: 1px; 
+               border-left: 1px solid dimgray; 
+               border-top: 1px solid dimgray; 
+               border-right: 1px solid white; 
+               border-bottom: 1px solid white; 
+ }
+
+/*********************下面的部分需要修改***************************/
+.BasicPersonalInformation{
+	width:90%;
+	margin: 30px auto;
+	border: 2px solid gray;	/*#D6D6D6*/
+}
+.BasicPersonalInformation table:nth-child(2n+1){
+	width: 100%;
+	height: 30px;
+	border: 1px solid #D6D6D6;
+	/*background-color: green;*/
+}
+.BasicPersonalInformation table:nth-child(2n+1) tr{
+	height: 30px;
+}
+
+.InformationTd1{
+	width: 95%;	
+	transition: 0.2s all;
+	-webkit-transition: 0.2s all;
+	-moz-transition: 0.2s all;
+	-o-transition: 0.2s all;
+	border: 1px solid #D6D6D6;
+	border-radius: 0.2em;
+	-webkit-border-radius: 0.2em;
+	-moz-border-radius: 0.2em;
+	-o-border-radius: 0.2em;
+}
+.InformationTd1:hover  
+{	
+	font-size:20px;
+	background-color:orange;/*#C80100*/
+	box-shadow: 0 0 0px 2px #fff;
+	-webkit-transform: scale(1.05) translateY(-5px);
+	z-index: 11;
+	border-color:#FF7D13;
+}
+.InformationTd2
+{
+	transition: 0.2s all;
+	-webkit-transition: 0.2s all;
+	-moz-transition: 0.2s all;
+	-o-transition: 0.2s all;
+	border: 1px solid #D6D6D6;
+	border-radius: 0.2em;
+	-webkit-border-radius: 0.2em;
+	-moz-border-radius: 0.2em;
+	-o-border-radius: 0.2em;
+}
+.InformationTd2:hover  
+{	
+	font-size:20px;
+	background-color:#C80100;
+	box-shadow: 0 0 0px 2px #fff;
+	-webkit-transform: scale(1.001) translateY(-0px);
+	z-index: 11;
+	border-color:#FF7D13;
+	cursor: pointer;
+}
+#BasicInfo
+{
+	display:block;
+	/*border:2px solid red;*/
+	/*background-color: yellow;*/
+}
+#BasicInfo table:nth-child(1){
+	/*border:1px solid red;*/
+	background-color: none;
+}
+#BasicInfo table:nth-child(1) td{
+	width:50%;
+}
+
+#PrivateInfo
+{
+	display:block;
+	/*background-color: #666361;*/
+	/*background-color:pink;*/
+}
+#PrivateInfo table:nth-child(1){
+	/*border:1px solid red;*/
+	background-color: none;
+}
+#PrivateInfo table:nth-child(1) td{
+	width:50%;
+}
+
+#code{
+	/*border: 2px solid red;*/
+	border: 1px solid orange;
+	width: 100px;
+	height:38px;
+	position:relative;
+	top:15px;
+	cursor:pointer;
+	
+	transition: all 0.5s linear 0s;
+	-webkit-transition: all 0.5s linear 0s;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	
+	border-radius: 0.2em;
+	-webkit-border-radius: 0.2em;
+	-moz-border-radius: 0.2em;
+	-o-border-radius: 0.2em;
+
+}
+
+#code:hover{
+	font-size:20px;
+	box-shadow: 0 0 0px 2px #fff;
+	-webkit-transform: scale(1.3) translateY(-5px);
+	z-index: 11;
+
+}
+
+.button
+{
+	border: solid 2px #3D3327;
+}
+.button:hover
+{
+	background:#FF7D13;
+	border: solid 2px #FF7D13;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
